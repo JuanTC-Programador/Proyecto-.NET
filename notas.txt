@@ -119,6 +119,7 @@ dotnet add package Swashbuckle.AspNetCore
 
 // Cree la migración inicial
 dotnet ef migrations add InitialCreate
+dotnet ef migrations add PrecisionPrice
 
 //Cree la base de datos
 dotnet ef database update
@@ -140,3 +141,10 @@ dotnet tool update --global dotnet-ef
 // Ejecutar el proyecto
 dotnet build
 dotnet run
+
+
+solucion de errores
+
+dotnet ef database drop elimina base de datos guardadas con otro nombre 
+(Y)
+dotnet ef database update
