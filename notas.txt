@@ -1,0 +1,142 @@
+
+Tarea 1: Configuración del proyecto
+
+Resumen: Crear proyecto de Minimal API en .NET y configurar dependencias básicas. ya
+Descripción:
+
+Crear un proyecto de tipo Minimal API en .NET 8 (dotnet new web). ya
+Configurar Entity Framework Core en el proyecto (Microsoft.EntityFrameworkCore y
+Microsoft.EntityFrameworkCore.SqlServer).ya
+Configurar el archivo appsettings.json para la conexión a la base de datos. ya
+Crear clase Program.cs básica con servicios y middleware mínimos.ya
+Criterios de aceptación:
+Proyecto creado sin errores. ya
+Dependencias de EF Core instaladas correctamente. ya
+Cadena de conexión configurada en appsettings.json. ya
+
+
+
+Tarea 2: Definir modelo y DbContext
+Resumen: Crear modelo de entidad y DbContext usando Code First.
+Descripción:
+
+Crear entidad Product con propiedades: Id, Name, Price.
+Crear AppDbContext que herede de DbContext e incluya DbSet<Product>.
+Configurar la cadena de conexión en DbContext usando optionsBuilder.
+Criterios de aceptación:
+Product y AppDbContext creados correctamente.
+Contexto listo para migraciones.
+
+
+
+
+Tarea 3: Crear repositorio genérico
+Resumen: Implementar patrón de repositorio para la entidad Product.
+Descripción:
+
+Crear interfaz IRepository<T> con métodos básicos: GetAll(), GetById(), Add(), Update(), Delete().
+Crear clase Repository<T> que implemente la interfaz usando AppDbContext.
+Criterios de aceptación:
+Repositorio genérico funcional para cualquier entidad.
+Métodos implementados con EF Core.
+
+
+
+Tarea 4: Configurar servicios y DI
+Resumen: Configurar inyección de dependencias para repositorios y DbContext.
+Descripción:
+
+Registrar AppDbContext en Program.cs.
+Registrar IRepository<Product> con su implementación Repository<Product>.
+Criterios de aceptación:
+DI configurada y funcional.
+Repositorio accesible desde los endpoints.
+
+
+
+Tarea 5: Crear migraciones y aplicar base de datos
+Resumen: Inicializar base de datos usando EF Core Code First.
+Descripción:
+
+Crear migración inicial (dotnet ef migrations add InitialCreate).
+Aplicar migración a la base de datos (dotnet ef database update).
+Criterios de aceptación:
+Base de datos creada correctamente con tabla Products.
+
+
+
+Tarea 6: Crear endpoint GET
+Resumen: Crear endpoint para obtener todos los productos.
+Descripción:
+
+Crear endpoint GET /products que devuelva todos los productos usando el repositorio.
+Usar inyección de dependencias para acceder al repositorio.
+Criterios de aceptación:
+Endpoint funcional y retorna lista de productos.
+Respuesta en formato JSON.
+
+
+
+Tarea 7: Crear endpoint POST
+Resumen: Crear endpoint para agregar un nuevo producto.
+Descripción:
+
+Crear endpoint POST /products que reciba un Product en el cuerpo de la solicitud.
+Guardar el producto en la base de datos usando el repositorio.
+Validar que los campos obligatorios estén presentes.
+Criterios de aceptación:
+Endpoint funcional y almacena correctamente el producto.
+Devuelve estado 201 Created al crear el producto.
+
+
+NOTAS:
+
+creo una carpeta de proyecto
+sudcarpeta api
+
+// se creo api- con el codigo
+dotnet new webapi -n API --use-controllers,
+dotnet new web -n MiMinimalApi -f net9.0
+dotnet new webapi -n Api -f net9.0 --use-controllers
+dotnet new webapi -n MiMinimalApi -f net9.0 --use-controllers
+dotnet new webapi -n ProductApi -o ProductApi -f net9.0 --use-controllers
+
+
+
+//cd MiMinimalApi
+
+// Agregue dependencias de Entity Framework Core
+
+dotnet add package Microsoft.EntityFrameworkCore
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+
+libreria adiciona
+dotnet add package Swashbuckle.AspNetCore
+
+
+
+// Cree la migración inicial
+dotnet ef migrations add InitialCreate
+
+//Cree la base de datos
+dotnet ef database update
+
+Parametros
+crear:
+
+AppDbContext
+IRepository
+Product
+Repository
+
+
+
+dotnet tool install --global dotnet-ef
+
+dotnet tool update --global dotnet-ef
+
+// Ejecutar el proyecto
+dotnet build
+dotnet run
