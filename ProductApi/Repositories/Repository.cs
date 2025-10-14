@@ -43,7 +43,7 @@ namespace ProductApi.Repositories
             if (entity == null) return;
 
             _dbSet.Remove(entity);
-            await _context.SaveChangesAsync(); // ✅ Guardado interno
+            await _context.SaveChangesAsync();
         }
     }
 }

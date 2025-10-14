@@ -163,3 +163,4 @@ C:\Users\Juanc\Downloads\Proyecto\productApi\obj\Debug\net9.0\refint\ProductApi.
 C:\Users\Juanc\Downloads\Proyecto\productApi\obj\Debug\net9.0\ProductApi.pdb
 C:\Users\Juanc\Downloads\Proyecto\productApi\obj\Debug\net9.0\ProductApi.genruntimeconfig.cache
 C:\Users\Juanc\Downloads\Proyecto\productApi\obj\Debug\net9.0\ref\ProductApi.dll
+C:\Users\Juanc\Downloads\Proyecto\productapi\obj\Debug\net9.0\ProductApi.sourcelink.json

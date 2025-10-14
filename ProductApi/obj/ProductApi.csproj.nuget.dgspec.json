@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Juanc\\Downloads\\Proyecto\\ProductApi\\ProductApi.csproj": {}
+    "C:\\Users\\Juanc\\Downloads\\Proyecto\\productapi\\ProductApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Juanc\\Downloads\\Proyecto\\ProductApi\\ProductApi.csproj": {
+    "C:\\Users\\Juanc\\Downloads\\Proyecto\\productapi\\ProductApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Juanc\\Downloads\\Proyecto\\ProductApi\\ProductApi.csproj",
+        "projectUniqueName": "C:\\Users\\Juanc\\Downloads\\Proyecto\\productapi\\ProductApi.csproj",
         "projectName": "ProductApi",
-        "projectPath": "C:\\Users\\Juanc\\Downloads\\Proyecto\\ProductApi\\ProductApi.csproj",
+        "projectPath": "C:\\Users\\Juanc\\Downloads\\Proyecto\\productapi\\ProductApi.csproj",
         "packagesPath": "C:\\Users\\Juanc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Juanc\\Downloads\\Proyecto\\ProductApi\\obj\\",
+        "outputPath": "C:\\Users\\Juanc\\Downloads\\Proyecto\\productapi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Juanc\\AppData\\Roaming\\NuGet\\NuGet.Config"
